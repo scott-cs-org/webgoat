@@ -108,9 +108,6 @@
   </issueManagement>
 
   <properties>
-    <!-- Contrast Agent and Config Paths -->
-    <contrast.agent.path>/path/to/contrast-agent.jar</contrast.agent.path>
-    <contrast.config.path>/path/to/contrast_security.yaml</contrast.config.path>
     <!-- Shared properties with plugins and version numbers across submodules-->
     <asciidoctorj.version>2.5.10</asciidoctorj.version>
     <!-- Upgrading needs UI work in WebWolf -->
