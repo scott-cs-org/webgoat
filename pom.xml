@@ -108,6 +108,9 @@
   </issueManagement>
 
   <properties>
+    <!-- Contrast Agent and Config Paths -->
+    <contrast.agent.path>/path/to/contrast-agent.jar</contrast.agent.path>
+    <contrast.config.path>/path/to/contrast_security.yaml</contrast.config.path>
     <!-- Shared properties with plugins and version numbers across submodules-->
     <asciidoctorj.version>2.5.10</asciidoctorj.version>
     <!-- Upgrading needs UI work in WebWolf -->
@@ -119,6 +122,9 @@
     <commons-io.version>2.11.0</commons-io.version>
     <commons-lang3.version>3.12.0</commons-lang3.version>
     <commons-text.version>1.10.0</commons-text.version>
+    <!-- Contrast config information -->
+    <contrast.agent.path>/path/to/contrast-agent.jar</contrast.agent.path>
+    <contrast.config.path>/path/to/contrast_security.yaml</contrast.config.path>
     <guava.version>31.1-jre</guava.version>
     <jacoco.version>0.8.10</jacoco.version>
     <java.version>17</java.version>
@@ -671,6 +677,8 @@
                   <workingDir>${project.build.directory}</workingDir>
                   <arguments>
                     <argument>java</argument>
+                    <argument>-javaagent:${contrast.agent.path}</argument>
+                    <argument>-Dcontrast.config.path=${contrast.config.path}</argument>
                     <argument>-jar</argument>
                     <argument>-Dlogging.pattern.console=</argument>
                     <argument>-Dwebgoat.server.directory=${java.io.tmpdir}/webgoat_${webgoat.port}</argument>
